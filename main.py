@@ -282,9 +282,6 @@ while running:
     for ant in ants:
         ant.move()
         ant.draw(screen)
-    for ant in ants:
-        ant.move()
-        ant.draw(screen)
 
     # Draw food
     for row in food_manager.repository:
