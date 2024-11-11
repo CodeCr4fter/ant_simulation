@@ -1,7 +1,7 @@
 import pygame
 
 # Screen size
-WIDTH, HEIGHT = 900, 720
+WIDTH, HEIGHT = 720, 720
 screen = pygame.display.set_mode((WIDTH, HEIGHT))
 
 # Colors
@@ -16,15 +16,18 @@ GRAY = (128, 128, 128)
 # Simulation parameters
 ANTHILL_POINT_1 = (20, HEIGHT // 2)
 ANTHILL_POINT_2 = (WIDTH - 20, HEIGHT // 2)
+ANTHILL_POINT_3 = (WIDTH // 2, 20)
+ANTHILL_POINT_4 = (WIDTH // 2, HEIGHT - 20)
+
 PHEROMONE_STRENGTH = 100
 ANT_SPEED = 1
-NUM_OF_ANTS = 300
+NUM_OF_ANTS = 1000
 PHEROMONE_DETECTION_RANGE_SQUARED = 200 ** 2
 FOOD_DETECTION_RANGE_SQUARED = 100 ** 2
 FOOD_COLLECTION_RANGE_SQUARED = 10 ** 2
 DIRECTION_TOLERANCE = .7
 
-RANDOM_ANT_DIRECTION = 0.2 # +- value to randomly move
+RANDOM_ANT_DIRECTION = 0 # +- value to randomly move
 # 0.2 is good for simulations but 0 is fun to watch with no food
 
 DIRECTION_CHANGE_COOLDOWN = 5

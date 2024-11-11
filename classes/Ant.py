@@ -75,8 +75,27 @@ class Ant:
 
         self.x += self.speed * math.cos(self.direction)
         self.y += self.speed * math.sin(self.direction)
-        if self.x > WIDTH or self.x < 0 or self.y > HEIGHT or self.y < 0:
-            self.direction -= math.pi
+        #if self.x > WIDTH or self.x < 0 or self.y > HEIGHT or self.y < 0:
+        #    self.direction -= math.pi
+        if self.x >= WIDTH: # Right wall 
+            self.x = WIDTH 
+            self.direction = math.pi - self.direction + random.uniform(-0.1, 0.1) 
+        elif self.x <= 0: # Left wall 
+            self.x = 0 
+            self.direction = math.pi - self.direction + random.uniform(-0.1, 0.1) 
+        elif self.y >= HEIGHT: # Bottom wall 
+            self.y = HEIGHT 
+            self.direction = -self.direction + random.uniform(-0.1, 0.1) 
+        elif self.y <= 0: # Top wall 
+            self.y = 0 
+            self.direction = -self.direction + random.uniform(-0.1, 0.1) 
+        
+        # Update position 
+        self.x += self.speed * math.cos(self.direction) 
+        self.y += self.speed * math.sin(self.direction) 
+        # Wrap angle between 0 and 2π 
+        self.direction %= 2 * math.pi
+        
         if self.direction_change_cooldown > 0: self.direction_change_cooldown -= 1
 
     def direction_to_point(self, x, y):

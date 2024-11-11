@@ -3,7 +3,7 @@ import pygame
 from config import *
 from classes.Manager import food_manager, pheromone_manager
 from utils import spawn_food
-from classes.Nest import Nest1, Nest2
+from classes.Nest import Nest1, Nest2, Nest3, Nest4
 
 # Pygame initialization
 pygame.init()
@@ -41,6 +41,14 @@ while running:
     Nest2.draw_nest()
     Nest2.move_ants()
     Nest2.draw_ants()   
+
+    Nest3.draw_nest()
+    Nest3.move_ants()
+    Nest3.draw_ants()   
+
+    Nest4.draw_nest()
+    Nest4.move_ants()
+    Nest4.draw_ants()   
 
     # Draw food
     for row in food_manager.repository:

@@ -1,6 +1,6 @@
 import pygame
 
-from config import NUM_OF_ANTS, ANTHILL_POINT_1, ANTHILL_POINT_2, GREEN, BLUE
+from config import *
 from classes.Ant import Ant
 from config import screen
 
@@ -27,3 +27,5 @@ class Nest:
 
 Nest1 = Nest(ANTHILL_POINT_1[0], ANTHILL_POINT_1[1], GREEN, "Nest1")
 Nest2 = Nest(ANTHILL_POINT_2[0], ANTHILL_POINT_2[1], BLUE, "Nest2")
+Nest3 = Nest(ANTHILL_POINT_3[0], ANTHILL_POINT_3[1], RED, "Nest3")
+Nest4 = Nest(ANTHILL_POINT_4[0], ANTHILL_POINT_4[1], YELLOW, "Nest4")

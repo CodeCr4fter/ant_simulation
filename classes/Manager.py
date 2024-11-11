@@ -2,7 +2,7 @@ from collections import deque
 from typing import List, Set, Tuple, Type, Dict
 from config import *
 from classes.Food import Food
-from classes.Pheromones import Pheromone1, Pheromone2
+from classes.Pheromones import Pheromone1, Pheromone2, Pheromone3, Pheromone4
 
 class Manager:
     def __init__(self, obj_classes: Dict[str, Type]):
@@ -88,4 +88,5 @@ class Manager:
 
 # Initialize managers for food and pheromones
 food_manager = Manager({"food": Food})
-pheromone_manager = Manager({"Pheromone1": Pheromone1, "Pheromone2": Pheromone2})
+pheromone_manager = Manager({"Pheromone1": Pheromone1, "Pheromone2": Pheromone2, 
+                             "Pheromone3": Pheromone3, "Pheromone4": Pheromone4})
